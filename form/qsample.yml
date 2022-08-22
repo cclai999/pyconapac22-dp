@@ -1,0 +1,101 @@
+_type: 'sheet'
+label: '勞工一般體格及健康檢查紀錄'
+new_line: True
+input_items:
+  - _type: text
+    id: 1
+    label: 姓名
+    required: True
+    unit:
+    length: 16
+  - _type: radio
+    id: 2
+    label: 性別
+    required: True
+    input_items:
+      - _type: option
+        label: 男
+        required: True
+      - _type: option
+        label: 女
+        required: True
+  - _type: date
+    id: 3
+    label: 檢查日期
+    required: True
+  - _type: radio
+    id: 4
+    label: 是否需輪班
+    required: True
+    new_line: True
+    input_items:
+      - _type: option_input
+        id: 4-1
+        label: 是
+        value: True
+        required: False
+        new_line: False
+        input_items:
+          - _type: radio
+            label: ""
+            required: True
+            input_items:
+              - _type: option
+                label: 兩班制
+                value: 2class-perday
+                required: False
+              - _type: option
+                label: 三班制
+                value: 3class-perday
+                required: False
+              - _type: option
+                label: 四班制
+                value: 4class-perday
+                required: False
+              - _type: option_input
+                label: 其他
+                value: other
+                input_items:
+                  - _type: text
+                    label:
+                    required: True
+                    unit:
+                    length: 20
+                new_line: True
+      - _type: option
+        label: 否
+        value: False
+        required: False
+  - _type: check
+    id: 5
+    label: 您是否曾患有下列慢性疾病
+    required: True
+    new_line: True
+    input_items:
+      - _type: option
+        label: 高血壓
+        value: 高血壓
+        required: True
+      - _type: option
+        label: 糖尿病
+        value: 糖尿病
+        required: True
+      - _type: option
+        label: 心臟病
+        value: 心臟病
+        required: True
+      - _type: option_input
+        label: 癌症
+        value: 癌症
+        required: True
+        input_items:
+          - _type: text
+            label:
+            required: True
+            unit:
+            length: 20
+      - _type: option
+        label: 以上皆無
+        value: 以上皆無
+        required: True
+
